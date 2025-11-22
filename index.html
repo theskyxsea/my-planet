@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>MyPlanetKarma — Nature & Animal Healing Sanctuary</title>
+    <meta
+      name="description"
+      content="A healing sanctuary where people and rescued animals recover together. Ayurvedic herb farm, nature-healing therapy and an animal shelter."
+    />
+    <!-- Tailwind Play CDN (no build required) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --accent: #065f46;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      /* tiny accessible focus style */
+      .focus-ring:focus {
+        outline: 3px solid rgba(6, 95, 70, 0.15);
+        outline-offset: 3px;
+      }
+    </style>
+  </head>
+  <body class="bg-emerald-50 text-slate-900 antialiased">
+    <!-- HEADER -->
+    <header
+      class="sticky top-0 z-40 bg-white/70 backdrop-blur-sm border-b border-slate-100"
+    >
+      <div
+        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center gap-4"
+      >
+        <div class="flex items-center gap-3">
+          <div
+            class="w-10 h-10 rounded-md bg-[var(--accent)] text-white flex items-center justify-center font-bold"
+          >
+            MK
+          </div>
+          <div class="hidden sm:block">
+            <div class="text-lg font-extrabold">MyPlanetKarma</div>
+            <div class="text-xs text-emerald-800/80">
+              Nature &amp; Animal Healing Sanctuary
+            </div>
+          </div>
+        </div>
+
+        <!-- Desktop nav -->
+        <nav
+          id="desktopNav"
+          class="ml-auto hidden md:flex items-center gap-6 text-sm font-medium text-slate-600"
+        >
+          <a href="#vision" class="hover:text-[var(--accent)] focus-ring"
+            >Vision</a
+          >
+          <a href="#farm" class="hover:text-[var(--accent)] focus-ring"
+            >Herb Farm</a
+          >
+          <a href="#shelter" class="hover:text-[var(--accent)] focus-ring"
+            >Animal Shelter</a
+          >
+          <a href="#help" class="hover:text-[var(--accent)] focus-ring"
+            >How to Help</a
+          >
+          <a href="#contact" class="hover:text-[var(--accent)] focus-ring"
+            >Contact</a
+          >
+          <a
+            href="#help"
+            class="px-3 py-2 rounded-md bg-[var(--accent)] text-white text-sm font-semibold focus-ring"
+            >Donate</a
+          >
+        </nav>
+
+        <!-- Mobile hamburger -->
+        <div class="ml-auto md:hidden flex items-center">
+          <button
+            id="btnMobile"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+            class="p-2 rounded-md inline-flex items-center justify-center text-slate-700 hover:bg-slate-100 focus-ring"
+            title="Open menu"
+          >
+            <svg
+              id="iconMenu"
+              class="w-6 h-6"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+            >
+              <path
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile menu (hidden by default) -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden border-t border-slate-100 bg-white"
+      >
+        <div class="px-4 pt-3 pb-4 space-y-1">
+          <a
+            href="#vision"
+            class="block px-3 py-2 rounded-md text-slate-700 font-medium hover:bg-emerald-50"
+            >Vision</a
+          >
+          <a
+            href="#farm"
+            class="block px-3 py-2 rounded-md text-slate-700 font-medium hover:bg-emerald-50"
+            >Herb Farm</a
+          >
+          <a
+            href="#shelter"
+            class="block px-3 py-2 rounded-md text-slate-700 font-medium hover:bg-emerald-50"
+            >Animal Shelter</a
+          >
+          <a
+            href="#help"
+            class="block px-3 py-2 rounded-md text-slate-700 font-medium hover:bg-emerald-50"
+            >How to Help</a
+          >
+          <a
+            href="#contact"
+            class="block px-3 py-2 rounded-md text-slate-700 font-medium hover:bg-emerald-50"
+            >Contact</a
+          >
+          <a
+            href="#help"
+            class="block px-3 py-2 rounded-md bg-[var(--accent)] text-white font-semibold text-center"
+            >Donate</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <!-- HERO -->
+      <section class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div>
+          <h1
+            class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-emerald-900 leading-tight"
+          >
+            We heal in nature — a sanctuary for people &amp; animals
+          </h1>
+          <p class="mt-4 text-slate-700 max-w-prose">
+            MyPlanetKarma is a 6-acre healing sanctuary where rescued animals
+            roam freely, Ayurvedic herbs are grown organically and visitors
+            recover through nature-based therapies. Spend time with animals,
+            learn regenerative farming, and find calm in the healing gardens.
+          </p>
+
+          <div class="mt-6 flex flex-col sm:flex-row gap-3">
+            <button
+              id="openVisit"
+              class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-[var(--accent)] text-white font-semibold focus-ring"
+            >
+              Plan a Visit
+            </button>
+            <a
+              href="#help"
+              class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg border border-[var(--accent)] text-[var(--accent)] font-semibold focus-ring"
+              >How to Help</a
+            >
+          </div>
+
+          <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="bg-white p-4 rounded-2xl shadow">
+              <div class="text-[var(--accent)] text-xs font-bold uppercase">
+                Our Vision
+              </div>
+              <p class="mt-2 text-sm text-slate-700">
+                A freedom-first, nature-led sanctuary that supports both human
+                and animal wellbeing.
+              </p>
+            </div>
+
+            <div class="bg-white p-4 rounded-2xl shadow">
+              <div class="text-[var(--accent)] text-xs font-bold uppercase">
+                What We Grow
+              </div>
+              <p class="mt-2 text-sm text-slate-700">
+                Ayurvedic herbs such as Ashwagandha, Brahmi, Vasaka, Moringa
+                &amp; Lemongrass — cultivated chemical-free.
+              </p>
+            </div>
+
+            <div class="bg-white p-4 rounded-2xl shadow">
+              <div class="text-[var(--accent)] text-xs font-bold uppercase">
+                The Shelter
+              </div>
+              <p class="mt-2 text-sm text-slate-700">
+                Rescued animals receive food, medical care and the freedom to
+                roam — never chained or caged.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right column: decorative card / image placeholder -->
+        <div class="order-first lg:order-last">
+          <div class="rounded-2xl shadow-lg overflow-hidden">
+            <div
+              class="bg-gradient-to-br from-emerald-100/80 to-white p-6 h-64 sm:h-72 md:h-80 flex flex-col justify-between"
+            >
+              <div>
+                <div class="text-2xl font-bold text-emerald-900">
+                  Nature Healing
+                </div>
+                <div class="mt-2 text-sm text-slate-700">
+                  Therapy sessions, herb workshops and time with animals.
+                </div>
+              </div>
+
+              <div class="grid grid-cols-2 gap-3">
+                <div class="bg-white p-3 rounded-lg text-center">
+                  <div class="text-xs text-emerald-700 font-bold">Area</div>
+                  <div class="mt-1 font-semibold">6 acres</div>
+                </div>
+                <div class="bg-white p-3 rounded-lg text-center">
+                  <div class="text-xs text-emerald-700 font-bold">Approach</div>
+                  <div class="mt-1 font-semibold">Regenerative</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- VISION + QUICK FACTS -->
+      <section
+        id="vision"
+        class="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-6 items-start"
+      >
+        <div class="lg:col-span-2 bg-white rounded-2xl p-6 shadow">
+          <h2 class="text-2xl font-bold text-emerald-900">
+            Our Vision &amp; Purpose
+          </h2>
+          <p class="mt-3 text-slate-700">
+            MyPlanetKarma believes nature is medicine. Led by an Ayurvedic
+            practitioner, the sanctuary blends organic farming, compassionate
+            animal rescue and therapeutic practices to support long-term
+            wellbeing.
+          </p>
+
+          <div class="mt-4">
+            <h3 class="font-semibold">Visitor experiences</h3>
+            <ul class="mt-2 list-disc list-inside text-slate-700">
+              <li>Hands-on farm work and herb planting</li>
+              <li>Guided herb garden walks and workshops</li>
+              <li>Nature Healing sessions with rescued animals</li>
+              <li>Workshops on chemical-free farming and sustainable living</li>
+            </ul>
+          </div>
+        </div>
+
+        <aside class="bg-white rounded-2xl p-6 shadow">
+          <h4 class="font-semibold text-emerald-800">Quick facts</h4>
+          <dl class="mt-3 text-slate-700">
+            <div class="flex justify-between py-2 border-b border-slate-100">
+              <dt class="text-sm">Area</dt>
+              <dd class="font-semibold">6 acres</dd>
+            </div>
+            <div class="flex justify-between py-2 border-b border-slate-100">
+              <dt class="text-sm">Medicine</dt>
+              <dd class="font-semibold">Nature &amp; herbs</dd>
+            </div>
+            <div class="flex justify-between py-2">
+              <dt class="text-sm">Approach</dt>
+              <dd class="font-semibold">Chemical-free</dd>
+            </div>
+          </dl>
+
+          <div class="mt-4">
+            <!-- Developer-specified local path to uploaded PDF -->
+            <a
+              class="inline-block w-full text-center px-3 py-2 rounded-lg border border-emerald-200 text-emerald-700 font-semibold"
+              >Download project brief (PDF)</a
+            >
+          </div>
+        </aside>
+      </section>
+
+      <!-- FARM & SHELTER -->
+      <section id="farm" class="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div class="bg-white p-6 rounded-2xl shadow">
+          <h3 class="text-xl font-bold text-emerald-900">Organic Herb Farm</h3>
+          <p class="mt-3 text-slate-700">
+            Our farm grows herbs used in Ayurvedic practice following natural
+            processes — no chemical pesticides or synthetic fertilisers.
+            Visitors learn propagation, tending and how herbs are used for
+            wellbeing.
+          </p>
+        </div>
+
+        <div id="shelter" class="bg-white p-6 rounded-2xl shadow">
+          <h3 class="text-xl font-bold text-emerald-900">
+            Animal Shelter &amp; Care
+          </h3>
+          <p class="mt-3 text-slate-700">
+            A freedom-first policy: rescued animals and birds receive food,
+            medical care and space to roam. Interaction with animals is a core
+            part of Nature Healing therapy and workshops.
+          </p>
+        </div>
+      </section>
+
+      <!-- HELP (accordion) -->
+      <section id="help" class="mt-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div class="bg-white p-6 rounded-2xl shadow">
+            <h3 class="text-xl font-bold text-emerald-900">How You Can Help</h3>
+            <p class="mt-3 text-slate-700">
+              Your support helps us hire caretakers, secure the property, and
+              provide medical care and food. We welcome volunteers, donations
+              and long-term partners.
+            </p>
+            <ul class="mt-3 list-disc list-inside text-slate-700">
+              <li>Hire animal caretakers and medical staff</li>
+              <li>Install fencing and improve security</li>
+              <li>Feed and treat rescued animals</li>
+              <li>Support sustainable farm infrastructure</li>
+            </ul>
+
+            <div class="mt-4">
+              <button
+                id="openVisit2"
+                class="px-4 py-2 rounded-lg bg-[var(--accent)] text-white font-semibold focus-ring"
+              >
+                Donate / Volunteer
+              </button>
+            </div>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl shadow">
+            <h3 class="text-lg font-bold text-emerald-900">
+              Volunteer Roles (tap to expand)
+            </h3>
+
+            <div id="accordion" class="mt-4 space-y-3">
+              <div class="border border-slate-100 rounded-lg overflow-hidden">
+                <button
+                  class="w-full text-left px-4 py-3 flex items-center justify-between role-btn focus-ring"
+                  aria-expanded="false"
+                >
+                  <span class="font-medium text-slate-800"
+                    >Animal care assistants</span
+                  >
+                  <svg
+                    class="w-5 h-5 transform transition-transform"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 8l4 4 4-4"
+                    />
+                  </svg>
+                </button>
+                <div class="px-4 pb-4 hidden text-sm text-slate-700 role-desc">
+                  Help daily with feeding, basic cleaning, and companionship.
+                  Time commitment: variable (short &amp; long term).
+                </div>
+              </div>
+
+              <div class="border border-slate-100 rounded-lg overflow-hidden">
+                <button
+                  class="w-full text-left px-4 py-3 flex items-center justify-between role-btn focus-ring"
+                  aria-expanded="false"
+                >
+                  <span class="font-medium text-slate-800"
+                    >Organic farming helpers</span
+                  >
+                  <svg
+                    class="w-5 h-5 transform transition-transform"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 8l4 4 4-4"
+                    />
+                  </svg>
+                </button>
+                <div class="px-4 pb-4 hidden text-sm text-slate-700 role-desc">
+                  Assist with propagation, planting, mulching and seasonal
+                  tasks. Great for learning natural farming methods.
+                </div>
+              </div>
+
+              <div class="border border-slate-100 rounded-lg overflow-hidden">
+                <button
+                  class="w-full text-left px-4 py-3 flex items-center justify-between role-btn focus-ring"
+                  aria-expanded="false"
+                >
+                  <span class="font-medium text-slate-800"
+                    >Workshop facilitators</span
+                  >
+                  <svg
+                    class="w-5 h-5 transform transition-transform"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 8l4 4 4-4"
+                    />
+                  </svg>
+                </button>
+                <div class="px-4 pb-4 hidden text-sm text-slate-700 role-desc">
+                  Lead short sessions on herbs, herbal remedies, or
+                  animal-assisted therapy (training available).
+                </div>
+              </div>
+
+              <div class="border border-slate-100 rounded-lg overflow-hidden">
+                <button
+                  class="w-full text-left px-4 py-3 flex items-center justify-between role-btn focus-ring"
+                  aria-expanded="false"
+                >
+                  <span class="font-medium text-slate-800"
+                    >Fundraising &amp; community outreach</span
+                  >
+                  <svg
+                    class="w-5 h-5 transform transition-transform"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 8l4 4 4-4"
+                    />
+                  </svg>
+                </button>
+                <div class="px-4 pb-4 hidden text-sm text-slate-700 role-desc">
+                  Help build partnerships, run campaigns, and grow community
+                  support.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="mt-10">
+        <div class="bg-white p-6 rounded-2xl shadow">
+          <h3 class="text-xl font-bold text-emerald-900">
+            Contact &amp; Visit
+          </h3>
+          <p class="mt-3 text-slate-700">
+            Interested to visit, volunteer or support our project? Reach out
+            using the contact details below. (Replace placeholders with real
+            contact info before publishing.)
+          </p>
+
+          <div
+            class="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-3 text-slate-700"
+          >
+            <div>
+              <div class="text-sm text-slate-500">Email</div>
+              <div class="font-semibold">contact@myplanetkarma.org</div>
+            </div>
+            <div>
+              <div class="text-sm text-slate-500">Phone</div>
+              <div class="font-semibold">+91-XXXXXXXXXX</div>
+            </div>
+            <div>
+              <div class="text-sm text-slate-500">Address</div>
+              <div class="font-semibold">[Sanctuary address here]</div>
+            </div>
+          </div>
+
+          <div class="mt-4 flex flex-col sm:flex-row gap-3">
+            <a
+              href="mailto:contact@myplanetkarma.org"
+              class="px-4 py-2 rounded-lg border border-emerald-200 text-emerald-700 font-semibold focus-ring"
+              >Email Us</a
+            >
+            <a
+              class="px-4 py-2 rounded-lg border border-slate-100 text-slate-700 focus-ring"
+              >Download brief (PDF)</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <footer class="mt-12 text-center text-sm text-slate-500">
+        © <span id="yr"></span> MyPlanetKarma — Nature &amp; Animal Healing
+        Sanctuary. Built with care.
+      </footer>
+    </main>
+
+    <!-- PLAN A VISIT MODAL (simple client-side) -->
+    <div
+      id="modalOverlay"
+      class="fixed inset-0 z-50 hidden items-center justify-center p-4"
+    >
+      <div class="absolute inset-0 bg-black/40" id="modalBackdrop"></div>
+      <div
+        class="relative bg-white rounded-2xl shadow-lg max-w-xl w-full p-6 z-10"
+      >
+        <h4 class="text-lg font-bold text-emerald-900">Plan a Visit</h4>
+        <p class="mt-2 text-slate-700">
+          Fill this form and we'll get back to you. (Demo only — wire to your
+          backend before using.)
+        </p>
+
+        <form
+          id="visitForm"
+          class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3"
+          novalidate
+        >
+          <input
+            id="vName"
+            required
+            placeholder="Your name"
+            class="px-3 py-2 border rounded-md focus-ring"
+          />
+          <input
+            id="vPhone"
+            required
+            placeholder="Phone or WhatsApp"
+            class="px-3 py-2 border rounded-md focus-ring"
+          />
+          <input
+            id="vEmail"
+            type="email"
+            required
+            placeholder="Email"
+            class="px-3 py-2 border rounded-md sm:col-span-2 focus-ring"
+          />
+          <textarea
+            id="vMsg"
+            required
+            placeholder="Message / preferred dates"
+            class="px-3 py-2 border rounded-md sm:col-span-2"
+            rows="3"
+          ></textarea>
+
+          <div class="sm:col-span-2 flex justify-end gap-2">
+            <button
+              type="button"
+              id="modalCancel"
+              class="px-4 py-2 rounded-md border"
+            >
+              Cancel
+            </button>
+            <button
+              type="submit"
+              class="px-4 py-2 rounded-md bg-[var(--accent)] text-white"
+            >
+              Send
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- SCRIPTS: mobile nav toggle, modal, accordion, small UX helpers -->
+    <script>
+      // set year
+      document.getElementById("yr").textContent = new Date().getFullYear();
+
+      // mobile menu toggle
+      const btnMobile = document.getElementById("btnMobile");
+      const mobileMenu = document.getElementById("mobileMenu");
+      btnMobile.addEventListener("click", () => {
+        const open = mobileMenu.classList.toggle("hidden") === false;
+        btnMobile.setAttribute("aria-expanded", String(open));
+        // rotate icon slightly when open
+        document.getElementById("iconMenu").style.transform = open
+          ? "rotate(90deg)"
+          : "";
+      });
+
+      // Smooth scrolling focus fallback (when clicking anchors in mobile menu)
+      document.querySelectorAll('a[href^="#"]').forEach((a) => {
+        a.addEventListener("click", (e) => {
+          const href = a.getAttribute("href");
+          if (!href || href.length < 2) return;
+          // let browser handle — but ensure focus is applied for accessibility
+          setTimeout(() => {
+            const id = href.replace("#", "");
+            const el = document.getElementById(id);
+            if (el) {
+              el.setAttribute("tabindex", "-1");
+              el.focus();
+            }
+          }, 400);
+        });
+      });
+
+      // Modal logic
+      const modalOverlay = document.getElementById("modalOverlay");
+      const openVisitButtons = [
+        document.getElementById("openVisit"),
+        document.getElementById("openVisit2"),
+      ].filter(Boolean);
+      const openVisit2 = document.getElementById("openVisit2");
+      const modalBackdrop = document.getElementById("modalBackdrop");
+      const modalCancel = document.getElementById("modalCancel");
+      const visitForm = document.getElementById("visitForm");
+
+      function openModal() {
+        modalOverlay.classList.remove("hidden");
+        modalOverlay.classList.add("flex");
+        // focus on first input
+        setTimeout(() => document.getElementById("vName").focus(), 120);
+      }
+      function closeModal() {
+        modalOverlay.classList.add("hidden");
+        modalOverlay.classList.remove("flex");
+      }
+
+      openVisitButtons.forEach(
+        (btn) => btn && btn.addEventListener("click", openModal)
+      );
+      if (modalBackdrop) modalBackdrop.addEventListener("click", closeModal);
+      if (modalCancel) modalCancel.addEventListener("click", closeModal);
+
+      visitForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        // Basic demo behaviour — integrate with backend in production
+        alert(
+          "Thanks — demo only. Integrate with your backend to collect submissions."
+        );
+        closeModal();
+        visitForm.reset();
+      });
+
+      // Accordion behaviour for volunteers
+      document.querySelectorAll("#accordion .role-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const parent = btn.closest("div");
+          const desc = parent.querySelector(".role-desc");
+          const expanded = btn.getAttribute("aria-expanded") === "true";
+          // close all
+          document
+            .querySelectorAll("#accordion .role-desc")
+            .forEach((d) => d.classList.add("hidden"));
+          document.querySelectorAll("#accordion .role-btn").forEach((b) => {
+            b.setAttribute("aria-expanded", "false");
+            const icon = b.querySelector("svg");
+            if (icon) icon.style.transform = "";
+          });
+          if (!expanded) {
+            desc.classList.remove("hidden");
+            btn.setAttribute("aria-expanded", "true");
+            const icon = btn.querySelector("svg");
+            if (icon) icon.style.transform = "rotate(180deg)";
+          }
+        });
+      });
+
+      // Close mobile menu on resize to desktop
+      window.addEventListener("resize", () => {
+        if (window.innerWidth >= 768) {
+          mobileMenu.classList.add("hidden");
+          btnMobile.setAttribute("aria-expanded", "false");
+          document.getElementById("iconMenu").style.transform = "";
+        }
+      });
+
+      // Close modal on pressing Escape
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          if (!modalOverlay.classList.contains("hidden")) closeModal();
+          if (!mobileMenu.classList.contains("hidden")) {
+            mobileMenu.classList.add("hidden");
+            btnMobile.setAttribute("aria-expanded", "false");
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
